@@ -41,7 +41,7 @@ const playRound = (playerSelection, computerSelection) => {
 			winStatus = "player";
 		}
 	}
-	alert(gameResult);
+	console.log(gameResult);
 	return winStatus;
 };
 
