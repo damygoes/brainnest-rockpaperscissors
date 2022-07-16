@@ -8,6 +8,26 @@ const computerPlay = () => {
 	return choices[randomNumber];
 };
 
+function playerInput() {
+	let playerSelection = prompt("Please choose: Rock, Paper or Scissors");
+	while (!playerSelection) {
+		alert("ATTENTION! You need to make a choice");
+		playerSelection = prompt("Please choose: Rock, Paper or Scissors");
+	}
+	playerSelection = playerSelection.toLowerCase();
+	if (
+		playerSelection == "rock" ||
+		playerSelection == "scissor" ||
+		playerSelection == "paper"
+	) {
+		return playerSelection;
+	} else {
+		alert("Invalid choice!!! Please choose: Rock, Paper or Scissors ");
+		playerSelection = playerInput();
+		return playerSelection;
+	}
+}
+
 // The LOGIC of the game. Determine the winner by comparing both user and computer inputs
 const playRound = (playerSelection, computerSelection) => {
 	let gameResult = "";
@@ -51,8 +71,7 @@ const game = () => {
 	let tieCount = 0;
 
 	for (let i = 0; i < 5; i++) {
-		let userInput = prompt("Please choose: rock, paper or scissors");
-		let playerSelection = userInput.toLowerCase();
+		let playerSelection = playerInput();
 		let computerSelection = computerPlay();
 		let winStatus = playRound(playerSelection, computerSelection);
 		if (winStatus === "computer") {
@@ -63,9 +82,9 @@ const game = () => {
 			tieCount += 1;
 		}
 	}
-	// console.log(playerCount);
-	// console.log(computerCount);
-	// console.log(tieCount);
+	console.log(playerCount);
+	console.log(computerCount);
+	console.log(tieCount);
 
 	playerCount > computerCount
 		? alert("After 5 rounds, Player Won overall")
