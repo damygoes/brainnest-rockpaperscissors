@@ -13,6 +13,7 @@ const rounds = document.querySelector(".rounds");
 const result = document.querySelector(".result");
 const winner = document.querySelector(".winner");
 const restartButton = document.querySelector(".restart");
+const celebrate = document.querySelector(".celebrate");
 
 // Define all choices
 const choices = ["rock", "paper", "scissors"];
@@ -123,10 +124,10 @@ const game = () => {
 
 		if (playerCount > computerCount) {
 			winner.textContent = "You won the game";
-			winner.classList.toggle(gameWinner);
 		} else {
 			winner.textContent = "You lost the game";
 			winner.classList.toggle("loser");
+			celebrate.classList.toggle("hide");
 		}
 	};
 
@@ -162,17 +163,6 @@ restartButton.addEventListener("click", () => {
 	window.location.reload();
 });
 
-// ##########################################
-// function main() {
-// 	rockBtn.addEventListener("click", () => {
-// 		game("rock");
-// 	});
-// 	paperBtn.addEventListener("click", () => {
-// 		game("paper");
-// 	});
-// 	scissorsBtn.addEventListener("click", () => {
-// 		game("scissors");
-// 	});
-// }
-
-// main();
+party.confetti(runButton, {
+	count: party.variation.range(20, 40),
+});

@@ -6,36 +6,53 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./styles.css" />
 		<script src="./rockPaperScissors.js" defer></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"
+			defer
+		></script>
 		<!-- <script src="./practiceExercises.js" defer></script> -->
 		<title>Rock-Paper-Scissors Game</title>
 	</head>
 	<body>
 		<main>
-			<h1>rock paper scissors</h1>
-			<section class="display">
-				<div class="player-display">
-					<h3>Player</h3>
-					<p class="player-count">0</p>
+			<section class="left">
+				<p>r <img src="./assets/rock.svg" alt="rock" /> ck</p>
+				<p>p <img src="./assets/paper.svg" alt="paper" /> per</p>
+				<p>sc <img src="./assets/scissors.svg" alt="scissors" /> ssors</p>
+			</section>
+			<section class="right">
+				<div class="scoreboard">
+					<div class="person">
+						<img src="./assets/person.svg" alt="person" />
+						<p class="player-count">0</p>
+					</div>
+					<div class="computer">
+						<img src="./assets/ai.svg" alt="computer" />
+						<p class="computer-count">0</p>
+					</div>
 				</div>
+				<section class="information"></section>
+				<section class="actionButtons">
+					<button type="button" class="select-btn" id="rock">rock</button>
+					<button type="button" class="select-btn" id="paper">paper</button>
+					<button type="button" class="select-btn" id="scissors">scissors</button>
+				</section>
+				<section class="result hide">
+					<div>
+						<p class="winner"></p>
+						<button class="celebrate" onmousedown="party.confetti(this)">
+							celebrate
+						</button>
+					</div>
+					<button type="button" class="restart">Restart</button>
+				</section>
+			</section>
+
+			<!-- <section class="display">
 				<div class="computer-display">
 					<h3>Computer</h3>
-					<p class="computer-count">0</p>
 				</div>
-			</section>
-			<!-- <section class="instruction">
-				<h2 class="chooseMove">choose your move</h2>
-				<p class="rounds">rounds left: <span class="rounds-left"> 0 </span></p>
 			</section> -->
-			<section class="actionButtons">
-				<button type="button" class="select-btn" id="rock">rock</button>
-				<button type="button" class="select-btn" id="paper">paper</button>
-				<button type="button" class="select-btn" id="scissors">scissors</button>
-			</section>
-			<section class="information"></section>
-			<section class="result hide">
-				<p class="winner">Winner</p>
-				<button type="button" class="restart">Restart</button>
-			</section>
 		</main>
 	</body>
 </html>
