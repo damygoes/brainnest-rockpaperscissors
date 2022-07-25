@@ -12,8 +12,7 @@ body {
 	font-family: "Lato", sans-serif;
 	line-height: 1.6;
 	background-image: linear-gradient(#e5e5e5, #14213d);
-	/* background-image: linear-gradient(#e9c46a, #264653); */
-	/* background-color: #ccc; */
+	overflow: hidden;
 }
 main {
 	display: flex;
@@ -22,6 +21,7 @@ main {
 	height: 100vh;
 	padding: 2rem;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .left {
 	display: flex;
@@ -50,10 +50,11 @@ main {
 	align-items: center;
 	flex: 0.8;
 	gap: 3rem;
-	height: 50%;
+	max-height: 60%;
 	padding: 2rem;
 	border: none;
 	margin-right: 5rem;
+	margin-bottom: 3rem;
 	border-radius: 12px;
 	color: #fff;
 	background-color: #14213d;
@@ -89,6 +90,8 @@ main {
 .information {
 	font-size: 1.2rem;
 	font-style: italic;
+	border-bottom: 1rem;
+	/* border: 1px solid red; */
 }
 .actionButtons {
 	display: flex;
@@ -96,6 +99,8 @@ main {
 	align-items: center;
 	gap: 2rem;
 	width: 100%;
+	margin-top: 6rem;
+	/* border: 1px solid red; */
 }
 .actionButtons button,
 .restart {
@@ -146,4 +151,348 @@ main {
 }
 .loser {
 	color: #ff0000;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1280px) {
+	.scoreboard img {
+		width: 80px;
+		height: 80px;
+	}
+}
+@media screen and (max-width: 1050px) {
+	.scoreboard img {
+		width: 80px;
+		height: 80px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.left {
+		padding: 1rem;
+		margin-bottom: 2rem;
+		width: 100%;
+	}
+	.left p {
+		font-size: 3rem;
+		line-height: 1rem;
+		margin: 1rem 0;
+	}
+	.left img {
+		width: 50px;
+		height: 50px;
+	}
+	.right {
+		max-height: 75%;
+		flex: 1;
+		margin-right: 3rem;
+	}
+	.scoreboard img {
+		width: 100px;
+		height: 100px;
+	}
+	.actionButtons {
+		margin-top: 6rem;
+	}
+	.restart {
+		margin-top: 6rem;
+	}
+}
+@media screen and (max-width: 850px) {
+	main {
+		flex-direction: column;
+	}
+	.left {
+		padding: 1rem;
+		margin-bottom: 2rem;
+		width: 100%;
+	}
+	.left p {
+		font-size: 3.5rem;
+		line-height: 1rem;
+		margin: 1.2rem 0;
+	}
+	.left img {
+		width: 30px;
+		height: 30px;
+	}
+	.right {
+		flex: 1;
+		width: 100%;
+		margin-right: 0rem;
+	}
+	.scoreboard {
+		padding: 0;
+	}
+	.scoreboard img {
+		width: 70px;
+		height: 70px;
+	}
+	.scoreboard .person p,
+	.scoreboard .computer p {
+		font-size: 3rem;
+	}
+	.actionButtons {
+		gap: 3rem;
+	}
+	.actionButtons button,
+	.restart {
+		font-size: 1.5rem;
+		padding: 1rem;
+	}
+	.restart {
+		margin-top: 0rem;
+	}
+}
+@media screen and (max-width: 540px) {
+	main {
+		flex-direction: column;
+	}
+	.left {
+		padding: 1rem;
+		margin-bottom: 2rem;
+		width: 100%;
+	}
+	.left p {
+		font-size: 2rem;
+		line-height: 1rem;
+		margin: 0.5rem 0;
+	}
+	.left img {
+		width: 30px;
+		height: 30px;
+	}
+	.right {
+		flex: 1;
+		width: 100%;
+		margin-right: 0rem;
+	}
+	.scoreboard {
+		padding: 0;
+	}
+	.scoreboard img {
+		width: 70px;
+		height: 70px;
+	}
+	.scoreboard .person p,
+	.scoreboard .computer p {
+		font-size: 3rem;
+	}
+	.actionButtons {
+		gap: 3rem;
+	}
+	.actionButtons button,
+	.restart {
+		font-size: 1.5rem;
+		padding: 1rem;
+	}
+	.restart {
+		margin-top: 0rem;
+	}
+}
+@media screen and (max-width: 450px) {
+	main {
+		flex-direction: column;
+	}
+	.left p {
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+	}
+	.right {
+		flex: 1;
+		margin-right: 0rem;
+	}
+	.scoreboard img {
+		width: 70px;
+		height: 70px;
+	}
+	.actionButtons {
+		gap: 1.5rem;
+	}
+	.actionButtons button,
+	.restart {
+		font-size: 1rem;
+		padding: 1rem;
+	}
+}
+@media screen and (max-width: 415px) {
+	main {
+		flex-direction: column;
+	}
+	.left p {
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+	}
+	.right {
+		flex: 1;
+		margin-right: 0rem;
+	}
+	.scoreboard img {
+		width: 70px;
+		height: 70px;
+	}
+	.actionButtons {
+		gap: 1.5rem;
+	}
+	.actionButtons button,
+	.restart {
+		font-size: 1rem;
+		padding: 1rem;
+	}
+}
+@media screen and (max-width: 375px) {
+	main {
+		flex-direction: column;
+	}
+	.left {
+		padding: 1rem;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+	.left p {
+		font-size: 1.8rem;
+		line-height: 1rem;
+		margin: 0.5rem 0;
+		border-bottom: 1px solid #fca311;
+	}
+	.left img {
+		width: 30px;
+		height: 30px;
+	}
+	.right {
+		flex: 1;
+		width: 100%;
+		margin-right: 0rem;
+	}
+	.scoreboard {
+		padding: 0rem;
+	}
+	.scoreboard img {
+		width: 50px;
+		height: 50px;
+	}
+	.scoreboard .person p,
+	.scoreboard .computer p {
+		font-size: 2rem;
+	}
+	.actionButtons {
+		gap: 0.8rem;
+		margin-top: 3rem;
+	}
+	.actionButtons button,
+	.restart {
+		font-size: 1rem;
+		padding: 0.5rem 1rem;
+	}
+	.restart {
+		margin-top: 0rem;
+	}
+}
+@media screen and (max-width: 360px) {
+	main {
+		flex-direction: column;
+	}
+	.left {
+		padding: 1rem;
+		width: 100%;
+	}
+	.left p {
+		font-size: 2rem;
+		line-height: 1rem;
+		margin: 0.5rem 0;
+		border-bottom: 1px solid #fca311;
+	}
+	.left img {
+		width: 30px;
+		height: 30px;
+	}
+	.right {
+		flex: 1;
+		width: 100%;
+		margin-right: 0rem;
+	}
+	.scoreboard {
+		padding: 0rem;
+	}
+	.scoreboard img {
+		width: 50px;
+		height: 50px;
+	}
+	.scoreboard .person p,
+	.scoreboard .computer p {
+		font-size: 2rem;
+	}
+	.actionButtons {
+		gap: 0.8rem;
+	}
+	.actionButtons button,
+	.restart {
+		font-size: 1rem;
+		padding: 0.5rem 1rem;
+	}
+	.restart {
+		margin-top: 0rem;
+	}
+}
+@media screen and (max-width: 280px) {
+	main {
+		flex-direction: column;
+	}
+	.left {
+		flex-direction: row;
+		padding: 1rem;
+		width: 100%;
+	}
+	.left p {
+		font-size: 1rem;
+		line-height: 1rem;
+		margin: 0rem 0.5rem;
+	}
+	.left img {
+		width: 20px;
+		height: 20px;
+		margin: 0 -0.2rem;
+	}
+	.right {
+		flex: 1;
+		width: 100%;
+		margin: 0;
+		gap: 0;
+	}
+	.scoreboard {
+		flex-direction: column;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+	.scoreboard img {
+		width: 50px;
+		height: 50px;
+	}
+	.scoreboard .person p,
+	.scoreboard .computer p {
+		font-size: 3rem;
+	}
+	.information {
+		font-size: 1rem;
+		margin-bottom: 2rem;
+	}
+	.actionButtons {
+		flex-direction: column;
+		gap: 0.8rem;
+		margin-top: 0rem;
+	}
+	.actionButtons button,
+	.restart {
+		font-size: 1rem;
+		padding: 0.5rem 1rem;
+	}
+	.result div {
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.restart {
+		margin-top: 1rem;
+	}
+	.winner {
+		font-size: 1rem;
+	}
 }
